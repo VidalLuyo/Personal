@@ -1,0 +1,41 @@
+/* Estilos personalizados */
+
+body {
+    padding-top: 56px; /* Ajustar el cuerpo para el navbar fijo */
+}
+
+.sidebar {
+    position: fixed;
+    top: 56px; /* Altura del navbar */
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.nav-link {
+    color: #333;
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 56px); /* Altura del sidebar ajustado */
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scroll vertical en caso de que el contenido sea más largo */
+}
+
+.main {
+    margin-top: 56px; /* Ajuste del contenido principal para evitar solapamiento con el navbar fijo */
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .main {
+        margin-left: 200px;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="/public/css/contactanos.css">
+</head>
+
+<body>
+    <div class="contactUs">
+        <div class="title slide-in">
+            <h2>¡Contáctanos!</h2>
+        </div>
+        <div class="box">
+            <div class="contact form slide-in">
+                <h3>Rellene sus datos.</h3>
+                <form id="contact-form" action="/submit-form" method="POST">
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Nombres</span>
+                                <input type="text" id="nombres" name="nombres" placeholder="Nombres" required>
+                            </div>
+                            <div class="inputBox">
+                                <span>Apellidos</span>
+                                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                            </div>
+                        </div>
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Celular</span>
+                                <input type="text" id="celular" name="celular" placeholder="999 999 999"
+                                    pattern="[0-9]{9}" required>
+                            </div>
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="email" id="gmail" name="gmail" placeholder="correo@example.com" required>
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Consulta</span>
+                                <textarea id="consulta" name="consulta" placeholder="Escribe tu consulta aquí..."
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="row100">
+                            <div class="inputBox">
+                                <input type="submit" id="submit-button" value="Enviar">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact info slide-in">
+                <h3>Contact Info</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location-outline"></ion-icon></span>
+                        <p>Nuevo imperial, Cañete <br>PERÚ</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail-outline"></ion-icon></span>
+                        <a href="mailto:SeminarioMenor@gmail.com">SeminarioMenor@gmail.com</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="phone-portrait-outline"></ion-icon></span>
+                        <a href="tel:+51999999999">+51 999 999 999</a>
+                    </div>
+                    <ul class="sci">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                        <li><a href="#"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact map slide-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.4115363565083!2d-76.33510865271089!3d-13.073084448573837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910ffb8e0ecba939%3A0x44b6f529d6616ef8!2sColegio%20Seminario%20Menor%20%22Nuestra%20Se%C3%B1ora%20del%20Valle%22!5e0!3m2!1ses!2spe!4v1712688138611!5m2!1ses!2spe"
+                    width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/public/js/contactanos.js"></script>
+    <script src="/public/js/transicion.js"></script>
+</body>
+
+</html>

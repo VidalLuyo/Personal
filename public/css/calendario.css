@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/Inicio/Img/Fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor de notificaciones */
+.notification {
+  position: fixed;
+  top: 20px; /* Distancia desde la parte superior */
+  right: 20px; /* Distancia desde el lado derecho */
+  background-color: rgba(255, 0, 0, 0.8); /* Color de fondo rojo semi-transparente */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999; /* Asegura que esté en la parte superior */
+  transition: opacity 0.5s ease; /* Agrega una transición suave para la opacidad */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px; /* Ajusta el ancho del contenedor */
+    position: relative; /* Asegura que los mensajes emergentes se posicionen correctamente */
+    margin: auto; /* Centra el formulario horizontalmente */
+  }
+  
+
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px; /* Añade un margen inferior al título */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold; /* Añade negrita al texto del label */
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Agrega una transición suave al color del borde */
+}
+
+input:focus,
+textarea:focus {
+    border-color: #3498db; /* Cambia el color del borde al enfocar el input */
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Agrega una transición suave al color del borde */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+
+.back-link {
+    text-align: center;
+    margin-top: 20px; /* Añade un margen superior al enlace de retroceso */
+}
+
+.back-link a {
+    color: #333;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #af4c4c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 1s ease;
+    opacity: 1;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+.message {
+    font-size: 20px;
+    color: #333;
+}
+
+
+
+
+
+/* Estilos para el contenedor de los botones */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para el botón Enviar */
+#submit-button {
+    width: 150px; /* Ajusta el ancho del botón */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    background-color: #2ecc71; /* Color de fondo verde para el botón Enviar */
+    align-self: flex-start; /* Alinea el botón Enviar arriba */
+}
+
+/* Estilos para el botón Limpiar */
+#clear-button {
+    width: 150px; /* Ajusta el ancho del botón */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    background-color: #e74c3c; /* Color de fondo rojo para el botón Limpiar */
+    align-self: flex-end; /* Alinea el botón Limpiar abajo */
+}
+
+/* Estilos adicionales para los botones */
+button {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Agrega una transición suave al color de fondo del botón */
+}
+
+button:hover {
+    opacity: 0.8; /* Reduce la opacidad del botón al pasar el mouse */
+}

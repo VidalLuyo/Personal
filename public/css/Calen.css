@@ -1,0 +1,67 @@
+.event-box {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #4CAF50; /* Borde verde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Bordes redondeados */
+    width: 60%; /* Ancho del cuadro */
+    max-height: 70%; /* Altura máxima del cuadro */
+    overflow-y: auto;
+    font-family: 'Arial', sans-serif;
+}
+
+.event-box .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px; /* Tamaño del botón de cerrar */
+    cursor: pointer;
+    color: #ff0000; /* Color rojo */
+}
+
+
+
+
+#eventDetails {
+    margin-top: 20px;
+}
+
+.event-date {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.event-info {
+    margin-bottom: 10px; /* Ajusta el espacio entre cada evento */
+}
+
+
+.event-info {
+    margin-bottom: 20px; /* Ajusta el espacio entre cada evento */
+}
+
+.event-name {
+    font-size: 18px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.event-description {
+    margin-top: 5px; /* Separación entre título y descripción */
+    margin-bottom: 10px; /* Separación entre eventos */
+    line-height: 1.5; /* Espacio entre líneas */
+    font-size: 16px; /* Tamaño de fuente de la descripción */
+    color: #333; /* Color del texto */
+}
+
+.event-info:not(:last-child) {
+    border-bottom: 1px solid #ccc; /* Línea de separación entre eventos */
+    padding-bottom: 10px; /* Espacio después de la línea de separación */
+}
