@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     showMessage('¡Usted inicio como administradorcorrectamente!.', '#838181');
                     setTimeout(() => {
                         messageElement.classList.add('hidden');
-                        window.location.href = 'http://127.0.0.1:3000/public/Crud_Noticias.html'; // Redirección exitosa después de 5 segundos
+                        window.location.href = 'http://44.194.224.101:3000/public/Crud_Noticias.html'; // Redirección exitosa después de 5 segundos
                     }, 3000); // 5 segundos en milisegundos (5 * 1000)
                 } else {
                     throw new Error(data.message);

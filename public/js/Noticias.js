@@ -2,7 +2,7 @@ let currentSlideIndex = 0;
 let intervalId;
 
 function fetchNews() {
-    fetch("http://localhost:3000/api/news")
+    fetch("http://44.194.224.101:3000/api/news")
         .then(response => response.json())
         .then(data => {
             const carouselSlide = document.getElementById("carouselSlide");

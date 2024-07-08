@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql2');
 const path = require('path');
 const app = express();
-const ip = 'localhost';
+const ip = '44.194.224.101';
 const port = 3000;
 const fs = require('fs');
 
@@ -16,10 +16,10 @@ app.use(express.static(path.join(__dirname)));
 
 // Configuración de conexión a MySQL
 let conexion = mysql.createConnection({
-    host: "database-1.ckrhtyubbrmo.us-east-1.rds.amazonaws.com",
+    host: "127.0.0.1",
     database: "db_consultas",
-    user: "admin",
-    password: "admin123"
+    user: "root",
+    password: "server"
 });
 
 conexion.connect((err) => {
