@@ -23,11 +23,18 @@ jobs:
           git config --global user.email "jesus.luyoc@vallegrande.edu.pe"
           git config --global user.name "JesúsVidalLuyo"
 
-      - name: Crear y hacer commit automático
+      - name: Crear y hacer commit automático con contador
         run: |
-          echo "Mi commit diario personal" > "Mis commits Personales.txt"
+          # Obtener el número de la última línea o iniciar en 1 si el archivo no existe
+          if [ -f "Mis commits Personales.txt" ]; then
+            count=$(wc -l < "Mis commits Personales.txt")
+            count=$((count + 1))
+          else
+            count=1
+          fi
+          echo "Mi Commit diario $count" >> "Mis commits Personales.txt"
           git add "Mis commits Personales.txt"
-          git commit -m "Mi commit diario personal"
+          git commit -m "Mi commit diario $count"
 
       - name: Push de los cambios
         env:
