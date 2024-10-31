@@ -23,19 +23,19 @@ jobs:
         run: |
           echo "Mi primer commit diario personal" > "Mis commits Personales.txt"
           git add "Mis commits Personales.txt"
-          git commit -m "Mi primer commit diario personal"
+          git commit -m "Mi commit diario personal"
 
       - name: Crear y hacer segundo commit automático
         run: |
           echo "Mi segundo commit diario personal" >> "Mis commits Personales.txt"
           git add "Mis commits Personales.txt"
-          git commit -m "Mi segundo commit diario personal"
+          git commit -m "Mi commit diario personal"
 
       - name: Crear y hacer tercer commit automático
         run: |
           echo "Mi tercer commit diario personal" >> "Mis commits Personales.txt"
           git add "Mis commits Personales.txt"
-          git commit -m "Mi tercer commit diario personal"
+          git commit -m "Mi commit diario personal"
 
       - name: Push de los cambios
         env:
