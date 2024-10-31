@@ -28,6 +28,6 @@ jobs:
 
       - name: Push de los cambios
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          git push
+          git push https://$PAT_TOKEN@github.com/VidalLuyo/Personal.git
