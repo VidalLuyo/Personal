@@ -28,6 +28,6 @@ jobs:
 
       - name: Push de los cambios
         env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+          AUTH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          git push https://$PAT_TOKEN@github.com/VidalLuyo/Personal.git
+          git push https://$AUTH_TOKEN@github.com/VidalLuyo/Personal.git
