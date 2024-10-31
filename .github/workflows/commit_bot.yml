@@ -1,0 +1,32 @@
+name: Bot de Commits
+
+on:
+  schedule:
+    - cron: "30 19 * * *" # 2:30 
+    - cron: "35 19 * * *" # 2:35 
+    - cron: "40 19 * * *" # 2:40 
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+
+      - name: Configurar información de usuario de Git
+        run: |
+          git config --global user.email "jesus.luyoc@vallegrande.edu.pe"
+          git config --global user.name "JesúsVidalLuyo"
+
+      - name: Crear y hacer commit automático
+        run: |
+          echo "Commit realizado el $(date)" >> log.txt
+          git add log.txt
+          git commit -m "Mi commit personal"
+
+      - name: Push de los cambios
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git push
