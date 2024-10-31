@@ -21,9 +21,9 @@ jobs:
 
       - name: Crear y hacer commit automático
         run: |
-          echo "Commit realizado el $(date)" >> log.txt
-          git add log.txt
-          git commit -m "Mi commit personal"
+          echo "Mi commit diario personal" > "Mis commits Personales.txt"
+          git add "Mis commits Personales.txt"
+          git commit -m "Mi commit diario personal"
 
       - name: Push de los cambios
         env:
