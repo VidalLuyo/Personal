@@ -1,4 +1,4 @@
-name: Bot de Commits
+name: Bot de Commits 3
 
 on:
   schedule:
