@@ -1,0 +1,41 @@
+name: Bot de Commits 4
+
+on:
+  schedule:
+    - cron: "15 18 * * *" # 1:15 pm en Perú (6:15 pm UTC)
+  workflow_dispatch: # Permite ejecutar el workflow manualmente
+
+jobs:
+  commit:
+    permissions: 
+      contents: write # Permiso para hacer push al repositorio
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+
+      - name: Configurar información de usuario de Git
+        run: |
+          git config --global user.email "jesus.luyoc@vallegrande.edu.pe"
+          git config --global user.name "JesúsVidalLuyo"
+
+      - name: Crear y hacer commit automático con contador
+        run: |
+          # Obtener el número de la última línea o iniciar en 1 si el archivo no existe
+          if [ -f "Mis commits Personales3.txt" ]; then
+            count=$(wc -l < "Mis commits Personales3.txt")
+            count=$((count + 1))
+          else
+            count=1
+          fi
+          echo "Mi Commit diario $count" >> "Mis commits Personales3.txt"
+          git add "Mis commits Personales3.txt"
+          git commit -m "Mi commit diario $count"
+
+      - name: Push de los cambios
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          git push https://$GITHUB_TOKEN@github.com/VidalLuyo/Personal.git
