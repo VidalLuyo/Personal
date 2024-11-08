@@ -2,19 +2,12 @@ name: Bot de Commits
 
 on:
   schedule:
-<<<<<<< HEAD
-    - cron: "30 19 * * *" # 2:30 pm en Perú (7:30 pm UTC)
-    - cron: "35 19 * * *" # 2:35 pm en Perú (7:35 pm UTC)
-    - cron: "40 19 * * *" # 2:40 pm en Perú (7:40 pm UTC)
-  workflow_dispatch: # Esto permite ejecutar el workflow manualmente desde GitHub
-=======
     - cron: "0 18 * * *"  # 1:00 pm en Perú (6:00 pm UTC)
     - cron: "5 18 * * *"  # 1:05 pm en Perú (6:05 pm UTC)
     - cron: "10 18 * * *" # 1:10 pm en Perú (6:10 pm UTC)
     - cron: "15 18 * * *" # 1:15 pm en Perú (6:15 pm UTC)
     - cron: "20 18 * * *" # 1:20 pm en Perú (6:20 pm UTC)
   workflow_dispatch: # Permite ejecutar el workflow manualmente
->>>>>>> 6f4ba7a0bbc7624fc5577a8a1ab2762c294b9299
 
 jobs:
   commit:
