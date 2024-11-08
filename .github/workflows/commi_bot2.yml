@@ -25,7 +25,7 @@ jobs:
         run: |
           # Obtener el número de la última línea o iniciar en 1 si el archivo no existe
           if [ -f "Mis commits Personales.txt" ]; then
-            count=$(wc -l < "Mis commits Personales.txt")
+            count=$(wc -l < "Mis commits Personales1.txt")
             count=$((count + 1))
           else
             count=1
