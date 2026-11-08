@@ -14,7 +14,7 @@ jobs:
     
     steps:
       - name: Checkout del repositorio
-        uses: actions/checkout@v2
+        uses: actions/checkout@v5
 
       - name: Configurar información de usuario de Git
         run: |
@@ -38,4 +38,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          git push https://$GITHUB_TOKEN@github.com/VidalLuyo/Personal.git
+          # Reintenta si otro bot hizo push al mismo tiempo
+          for i in 1 2 3 4 5; do
+            git pull --rebase https://$GITHUB_TOKEN@github.com/VidalLuyo/Personal.git main &&
+            git push https://$GITHUB_TOKEN@github.com/VidalLuyo/Personal.git HEAD:main && exit 0
+            echo "Push falló (intento $i), reintentando..."
+            sleep $((RANDOM % 10 + 5))
+          done
+          exit 1
